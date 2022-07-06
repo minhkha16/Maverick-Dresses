@@ -20,13 +20,12 @@ use App\Http\Controllers\Login_adminController;
 Route::get('/',[HomeController::class, 'home'])->name('home');
 Route::get('home', [HomeController::class, 'home'])->name('home');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
-Route::get('shopcategory', [HomeController::class, 'shopcategory'])->name('shopcategory');
 Route::get('productdetails', [HomeController::class, 'productdetails'])->name('productdetails');
 Route::get('confirmation', [HomeController::class, 'confirmation'])->name('confirmation');
 Route::get('shopingcart', [HomeController::class, 'shopingcart'])->name('shopingcart');
 
 
-
+Route::get('shopcategory', [HomeController::class, 'shopcategory'])->name('shopcategory');
 Route::get('them-vao-gio-hang/{id}', [HomeController::class, 'addToCart'])->name('addToCart');
 Route::get('gio-hang', [HomeController::class, 'cartCategory'])->name('cartCategory');
 // Route::get('buil-gio-hang', [CartController::class, 'buildCart'])->name('buildCart');
