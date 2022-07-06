@@ -30,8 +30,8 @@ Route::get('them-vao-gio-hang/{id}', [HomeController::class, 'addToCart'])->name
 Route::get('gio-hang', [HomeController::class, 'testCart'])->name('testCart');
 // Route::get('them-vao-gio-hang/{id}', [CartController::class, 'addToCart'])->name('addToCart');
 // Route::get('buil-gio-hang', [CartController::class, 'buildCart'])->name('buildCart');
-// Route::get('deleteCart/{id}', [CartController::class, 'deleteCart'])->name('deleteCart');
-// Route::get('confirm', [CartController::class, 'confirm'])->name('confirm');
+Route::get('deleteCart/{id}', [HomeController::class, 'deleteCart'])->name('deleteCart');
+Route::get('confirm', [HomeController::class, 'confirm'])->name('confirm');
 
 
 

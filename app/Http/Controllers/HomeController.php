@@ -22,6 +22,21 @@ class HomeController extends Controller
         return view('cart.category_cart', ['products'=>$data]);
     }
 
+    public function testCart(){
+        $cart = Cart::content();
+        return view('cartNe.buildCart', ['cart' => $cart]);
+    }
+
+    public function deleteCart ($rowID) {
+        Cart::remove($rowID);
+        return redirect()->route('testCart');
+    }
+
+    public function confirm () {
+        $data = DB::table('products')->get();
+        return view('cartNe.confirm',['products'=>$data]);
+    }
+    
     public function contact() {
         return view('cart.contact');
     }
