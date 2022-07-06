@@ -25,10 +25,10 @@ Route::get('productdetails', [HomeController::class, 'productdetails'])->name('p
 Route::get('confirmation', [HomeController::class, 'confirmation'])->name('confirmation');
 Route::get('shopingcart', [HomeController::class, 'shopingcart'])->name('shopingcart');
 
-Route::get('them-vao-gio-hang/{id}', [HomeController::class, 'addToCart'])->name('addToCart');
 
-Route::get('gio-hang', [HomeController::class, 'testCart'])->name('testCart');
-// Route::get('them-vao-gio-hang/{id}', [CartController::class, 'addToCart'])->name('addToCart');
+
+Route::get('them-vao-gio-hang/{id}', [HomeController::class, 'addToCart'])->name('addToCart');
+Route::get('gio-hang', [HomeController::class, 'cartCategory'])->name('cartCategory');
 // Route::get('buil-gio-hang', [CartController::class, 'buildCart'])->name('buildCart');
 Route::get('deleteCart/{id}', [HomeController::class, 'deleteCart'])->name('deleteCart');
 Route::get('confirm', [HomeController::class, 'confirm'])->name('confirm');

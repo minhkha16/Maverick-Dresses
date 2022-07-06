@@ -14,7 +14,7 @@ class HomeController extends Controller
     public function addToCart($id) {
         $products = DB::table('products')->where('id', $id)->first();
         Cart::add($id , $products->name , 1 , $products->price); 
-        return redirect()->route('testCart');
+        return redirect()->route('cartCategory');
     }
 
     public function shopcategory() {
@@ -22,19 +22,19 @@ class HomeController extends Controller
         return view('cart.category_cart', ['products'=>$data]);
     }
 
-    public function testCart(){
+    public function cartCategory() {
         $cart = Cart::content();
-        return view('cartNe.buildCart', ['cart' => $cart]);
+        return view('cartCate.buildCart', ['cart' => $cart]);
     }
 
     public function deleteCart ($rowID) {
         Cart::remove($rowID);
-        return redirect()->route('testCart');
+        return redirect()->route('cartCategory');
     }
 
     public function confirm () {
         $data = DB::table('products')->get();
-        return view('cartNe.confirm',['products'=>$data]);
+        return view('cartCate.confirm',['products'=>$data]);
     }
     
     public function contact() {

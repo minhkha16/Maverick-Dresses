@@ -67,7 +67,7 @@
             <i class="fa-regular fa-circle-check"></i>
         </div>
         <div class="ok">
-            <a href="{{ route('shopingcart') }}">Done</a>
+            <a href="{{ route('shopcategory') }}">Done</a>
         </div>
     </div>
 
