@@ -58,23 +58,18 @@
     </style>
 </head>
 <body>
-        <div class="warper">
-            <div class="box">
-                <p>Xác nhận thanh toán thành công</p>
-                    <span></span>{{ \Cart::total() }} VNĐ
-            </div>
-            <div class="icon">
-                <i class="fa-regular fa-circle-check"></i>
-            </div>
-            <div class="ok">
-                <a href="{{ route('shopingcart') }}">Done</a>
-            </div>
-        </div>
-
-    {{-- <div class="warper">
+    <div class="warper">
         <div class="box">
-            Xác nhận thanh toán thành công {{ $products->name }}
+            <p>Xác nhận thanh toán thành công</p>
+                <span></span>{{ \Cart::total() }} VNĐ
         </div>
-    </div> --}}
+        <div class="icon">
+            <i class="fa-regular fa-circle-check"></i>
+        </div>
+        <div class="ok">
+            <a href="{{ route('shopingcart') }}">Done</a>
+        </div>
+    </div>
+
 </body>
 </html>
